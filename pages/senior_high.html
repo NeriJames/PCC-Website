@@ -1,22 +1,23 @@
 <section id="senior_high_section">
     <h1>Senior High School</h1>
     <div class="cards">
-        <!-- Overview Card -->
+        <!-- Overview and Curriculum Highlights side by side -->
         <div class="card sh-card">
-            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/2E0E2A4B22-1721780990.jpg" alt="Senior High Overview">
+            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/1AEC0300CD-1721781015.jpg" alt="Senior High Overview">
             <h3>Overview</h3>
             <p>
                 Choose specialized tracks such as Academic, Technical-Vocational, and Arts & Design for career readiness. Grades 11-12 prepare students for higher education or workforce entry.
             </p>
         </div>
 
-        <!-- Curriculum Highlights Card -->
-        <div class="card sh-card">
+        <div class="card sh-card curriculum-highlight">
             <h3>Curriculum Highlights</h3>
-            <p>• Embodies the theme "Parish and School: Journeying in Joyful Mission."</p>
-            <p>• Focuses on Catholic education through enriched faith and values integration.</p>
-            <p>• Offers curriculum maps focused on moral and civic education and relevant college preparation.</p>
-            <p>• Promotes a joyful mission of Catholic service and community.</p>
+            <div class="highlight-details">
+                <p>• Embodies the theme "Parish and School: Journeying in Joyful Mission."</p>
+                <p>• Focuses on Catholic education through enriched faith and values integration.</p>
+                <p>• Offers curriculum maps focused on moral and civic education and relevant college preparation.</p>
+                <p>• Promotes a joyful mission of Catholic service and community.</p>
+            </div>
         </div>
 
         <!-- Academic Track 1 Card -->
@@ -67,7 +68,7 @@
         /* Cards container */
         #senior_high_section .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* Two cards per row */
             gap: 30px;
             max-width: 1200px;
             margin: 0 auto;
@@ -104,5 +105,29 @@
             color: #555;
             margin-bottom: 10px;
         }
+
+        /* Styling for the Curriculum Highlights card */
+.curriculum-highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Title stays centered */
+    padding: 30px; /* Padding for spacing */
+}
+
+/* Flexbox styling for the details: left-align only the content */
+.highlight-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /* Left align details */
+    text-align: left; /* Left align details */
+    width: 100%; /* Make it span the width of the card */
+    max-width: 500px; /* Optional: constrain width for better readability */
+    margin-top: 15px; /* Add spacing from the title */
+}
+
+        
     </style>
 </section>

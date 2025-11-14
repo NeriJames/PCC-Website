@@ -4,30 +4,24 @@
         
         <!-- Overview Card -->
         <div class="card gs-card">
-            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/GS_Overview.jpg" alt="ECE Overview">
+            <img src="https://storage.googleapis.com/school_sites/spud/images/academics/CE3A41224B-1721780761.jpg" alt="ECE Overview">
             <h3>Overview</h3>
-            <p>
-                Our Grade School program builds strong academic foundations while fostering values, critical thinking, and social responsibility in students from Grades 1 to 6.
-            </p>
-        </div>
-
-        <!-- Subjects Card -->
-        <div class="card gs-card">
-            <h3>Subjects</h3>
-            <p>• Language Arts & Reading</p>
-            <p>• Mathematics</p>
-            <p>• Science & Technology</p>
-            <p>• Social Studies</p>
-            <p>• Christian Values & Formation</p>
+            <div class="gs-details">
+                <p>
+                    Our Grade School program builds strong academic foundations while fostering values, critical thinking, and social responsibility in students from Grades 1 to 6.
+                </p>
+            </div>
         </div>
 
         <!-- Learning Approach Card -->
         <div class="card gs-card">
             <h3>Learning Approach</h3>
-            <p>• Student-centered learning: Encourages collaboration and active participation.</p>
-            <p>• Critical thinking & problem-solving skills</p>
-            <p>• Values formation integrated across subjects</p>
-            <p>• Enrichment activities: Arts, music, physical education, and STEM projects</p>
+            <div class="gs-details">
+                <p>• Student-centered learning: Encourages collaboration and active participation.</p>
+                <p>• Critical thinking & problem-solving skills</p>
+                <p>• Values formation integrated across subjects</p>
+                <p>• Enrichment activities: Arts, music, physical education, and STEM projects</p>
+            </div>
         </div>
 
     </div>
@@ -77,9 +71,15 @@
             padding: 25px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: left;
+            align-items: center; /* Keep title centered */
+            text-align: center; /* Title centered */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Left-align the details inside each card */
+        #ece_section .card.gs-card .gs-details {
+            text-align: left;
+            width: 100%;
         }
 
         #ece_section .card.gs-card img {
