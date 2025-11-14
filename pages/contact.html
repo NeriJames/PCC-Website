@@ -1,93 +1,244 @@
-<section id="contact_section">
-    <h1>Contact Us</h1>
-    <div class="contact-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact & Student Developers</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        
+    }
+
+    /* CONTACT SECTION */
+    .contact-wrapper {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Card Style */
+    .card {
+        flex: 1;
+        background: #fff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        box-sizing: border-box;
+    }
+
+    .card-title {
+        margin-bottom: 20px;
+        font-size: 22px;
+        font-weight: 600;
+        color: #222;
+    }
+
+    /* Form Styling */
+    .contact-card form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contact-card label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        background: #fafafa;
+    }
+
+    .contact-card textarea {
+        resize: vertical;
+        min-height: 120px;
+    }
+
+    .contact-card button {
+        padding: 12px;
+        border: none;
+        background: #b71c1c;
+        color: white;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .contact-card button:hover {
+        background: #8b0000;
+    }
+
+    /* Map Styling */
+    .map-container {
+        width: 100%;
+        height: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+        .contact-wrapper {
+            flex-direction: column;
+        }
+    }
+
+    /* STUDENT DEVELOPERS SECTION */
+    .student-wrapper {
+        width: 100%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    /* Main card */
+    .student-main-card {
+        background: #fff;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        text-align: center;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #222;
+    }
+
+    /* Two student mini-cards inside */
+    .student-cards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .student-card {
+        background: #fafafa;
+        padding: 20px;
+        width: 260px;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+        text-align: center;
+    }
+
+    .student-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+        border: 3px solid #b71c1c;
+    }
+
+    .student-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    .student-section {
+        font-size: 14px;
+        color: #666;
+    }
+
+    @media(max-width: 700px) {
+        .student-cards {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+<!-- CONTACT & MAP SECTION -->
+<div class="contact-wrapper">
+
+    <!-- Left Card: Form -->
+    <div class="card contact-card">
+        <h2 class="card-title">Get in Touch</h2>
+
         <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name">
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email">
+
+            <label>Message</label>
+            <textarea placeholder="Write your message"></textarea>
+
+            <button type="submit">Submit</button>
         </form>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.438486383525!2d121.08919407510163!3d14.575135989823267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c9f3d35f726f%3A0xe8c0e71221842b3b!2sPasig%20Catholic%20College!5e0!3m2!1sen!2sph!4v1600000000000!5m2!1sen!2sph" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <style>
-        #contact_section {
-            padding: 60px 20px;
-            text-align: center;
-        }
+    <!-- Right Card: Map -->
+    <div class="card map-card">
+        <h2 class="card-title">Find Us</h2>
 
-        #contact_section h1 {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 40px;
-            color: #2c3e50;
-        }
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.8977732987887!2d121.01535107506925!3d14.315960286913426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd6270303c631d%3A0x24b9d3462e3bd447!2sPolytechnic%20University%20of%20the%20Philippines%20-%20Sto.%20Tomas!5e0!3m2!1sen!2sph!4v1700000000000"
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
 
-        .contact-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            justify-content: center;
-            align-items: flex-start;
-        }
+</div>
 
-        /* Form Styling */
-        .contact-container form {
-            flex: 1 1 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            background: #fff;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-        }
+<!-- STUDENT DEVELOPERS SECTION -->
+<div class="student-wrapper">
 
-        .contact-container form input,
-        .contact-container form textarea {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 1em;
-            resize: none;
-        }
+    <div class="student-main-card">
 
-        .contact-container form button {
-            padding: 12px;
-            background-color: #2c3e50;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+        <h2 class="section-title">Student Developers</h2>
 
-        .contact-container form button:hover {
-            background-color: #34495e;
-        }
+        <div class="student-cards">
 
-        /* Map Styling */
-        .contact-container iframe {
-            flex: 1 1 400px;
-            height: 400px;
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-        }
+            <!-- Student 1 -->
+            <div class="student-card">
+                <img src="assets/JIM.jpg" alt="Student Photo">
+                <h3 class="student-name">JAMES M. NERI</h3>
+                <p class="student-section">BSP 2B</p>
+            </div>
 
-        @media (max-width: 900px) {
-            .contact-container {
-                flex-direction: column;
-            }
+            <!-- Student 2 -->
+            <div class="student-card">
+                <img src="https://via.placeholder.com/120" alt="Student Photo">
+                <h3 class="student-name">CLAIRE BERNADETTE S. VIGIL</h3>
+                <p class="student-section">BSP 2B</p>
+            </div>
 
-            .contact-container iframe,
-            .contact-container form {
-                width: 100%;
-            }
-        }
-    </style>
-</section>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
